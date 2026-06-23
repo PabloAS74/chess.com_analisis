@@ -28,7 +28,6 @@ for url in urls_meses:
             if es_rapid and es_ajedrez_normal:
                 todas_las_partidas.append(partida)
         
-        todas_las_partidas.extend(partidas_mes) 
     else:
         print(f"Error al descargar {url}. Status code: {respuesta.status_code}")
         
