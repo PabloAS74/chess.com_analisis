@@ -24,8 +24,9 @@ for url in urls_meses:
             # Comprobamos que sea una partida rapid
             es_rapid = partida.get("time_class") == "rapid"
             es_ajedrez_normal = partida.get("rules") == "chess"
+            es_600 = partida.get("time_control", "").startswith("600")
             
-            if es_rapid and es_ajedrez_normal:
+            if es_rapid and es_ajedrez_normal and es_600:
                 todas_las_partidas.append(partida)
         
     else:
